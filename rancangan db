@@ -1,0 +1,23 @@
+User (id, name, email, password)
+Prodi (id, id_jurusan, nama_prodi, keterangan)
+JurusanSekolah (id, nama_jurusan, keterangan)
+Jurusan (id, nama_jurusan,keterangan)
+Kriteria (id, nama_kriteria, bobot)
+
+
+
+
+use HasFactory;
+    protected $fillable = [
+        'id_jurusan_sekolah', 'prodi_id '
+    ];
+
+    public function jurusansekolah()
+    {
+        return $this->belongsTo(JurusanSekolah::class, 'id_jurusan_sekolah');
+    }
+
+    public function prodi()
+    {
+        return $this->belongsTo(Prodi::class, 'prodi_id');
+    }
