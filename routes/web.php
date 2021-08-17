@@ -9,6 +9,8 @@ use App\Http\Controllers\TabelPilihanController;
 use App\Http\Controllers\MetodaController;
 Use App\Http\Controllers\ResultController;
 Use App\Http\Controllers\PertanyaanController;
+Use App\Http\Controllers\PreferenceController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -39,6 +41,14 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('kriteria/update/{id}', [KriteriaController::class, 'edit'])->name('kriteria.edit');
     Route::patch('kriteria/update/{id}', [KriteriaController::class, 'update'])->name('kriteria.update');
     Route::delete('kriteria/delete/{id}', [KriteriaController::class, 'delete'])->name('kriteria.delete');
+
+    Route::get('preference', [PreferenceController::class, 'index'])->name('preference.index');
+    Route::get('preference/create', [PreferenceController::class, 'create'])->name('preference.create');
+    Route::post('preference/create', [PreferenceController::class, 'store'])->name('preference.store');
+    Route::get('preference/update/{id}', [PreferenceController::class, 'edit'])->name('preference.edit');
+    Route::patch('preference/update/{id}', [PreferenceController::class, 'update'])->name('preference.update');
+    Route::delete('preference/delete/{id}', [PreferenceController::class, 'delete'])->name('preference.delete');
+
 
     Route::get('jurusansekolah', [JurusanSekolahController::class, 'index'])->name('jurusansekolah.index');
     Route::get('jurusansekolah/create', [JurusanSekolahController::class, 'create'])->name('jurusansekolah.create');

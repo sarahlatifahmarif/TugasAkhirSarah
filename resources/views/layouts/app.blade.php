@@ -46,15 +46,15 @@
                                 </li>
                             @endif
 
-                            @if (Route::has('register'))
-                                <li class="nav-item">
+                           
+                        @else
+                         
+                            <li class="nav-item">
                                     <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
                                 </li>
-                            @endif
-                        @else
-                            {{-- <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('tabelpilihan.index') }}">{{ __('Pilihan Prodi') }}</a>
-                            </li> --}}
+                            <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('preference.index') }}">{{ __('Preferensi') }}</a>
+                                </li>
                              <li class="nav-item">
                                     <a class="nav-link" href="{{ route('kriteria.index') }}">{{ __('kriteria') }}</a>
                                 </li>
