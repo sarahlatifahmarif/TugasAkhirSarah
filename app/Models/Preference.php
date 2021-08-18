@@ -10,7 +10,9 @@ class Preference extends Model
     use HasFactory;
 
     protected $fillable = [
+        'kriteria1',
         'lable',
-        'bobot'
+        'bobot',
+        'kriteria2'
     ];
 }

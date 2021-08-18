@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Kriteria;
+use App\Models\Preference;
 
 class KriteriaController extends Controller
 {
@@ -15,7 +16,8 @@ class KriteriaController extends Controller
     }
 
     public function create(){
-        return view('kriteria.create');
+        $preference = Preference::all();
+        return view('kriteria.create', compact('preference'));
     }
 
     public function store(){

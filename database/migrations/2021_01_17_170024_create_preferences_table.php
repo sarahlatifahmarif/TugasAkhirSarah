@@ -15,8 +15,10 @@ class CreatePreferencesTable extends Migration
     {
         Schema::create('preferences', function (Blueprint $table) {
             $table->id();
+            $table->integer('kriteria1');
             $table->string('lable');
             $table->integer('bobot');
+            $table->integer('kriteria2');
             $table->timestamps();
         });
     }

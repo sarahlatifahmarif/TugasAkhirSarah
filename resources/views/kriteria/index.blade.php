@@ -18,7 +18,7 @@
                                 <thead>
                                     <th>No.</th>
                                     <th>Nama Kriteria</th>
-                                    <th>Bobot</th>
+                                    <th>Nilai</th>
                                     <th>Dibuat Pada</th>
                                     <th>Action</th>
                                 </thead>

@@ -17,8 +17,10 @@
                             <table class="table" style="margin-top: 12px">
                                 <thead>
                                     <th>No.</th>
+                                    <th>Kriteria 1</th>
                                     <th>Label</th>
                                     <th>Bobot</th>
+                                    <th>Kriteria 2</th>
                                     <th>Dibuat Pada</th>
                                     <th>Action</th>
                                 </thead>
@@ -26,8 +28,10 @@
                                     @foreach ($preference as $item)
                                         <tr>
                                             <td>{{ $no++ }}</td>
+                                            <td>{{ $item->kriteria1 }}</td>
                                             <td>{{ $item->lable }}</td>
                                             <td>{{ $item->bobot }}</td>
+                                            <td>{{ $item->kriteria2}}</td>
                                             <td>{{ $item->created_at->diffForHumans() }}</td>
                                             <td>
                                                 <form action="{{ route('preference.delete', $item->id) }}" method="post">

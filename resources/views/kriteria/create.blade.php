@@ -21,10 +21,14 @@
                             </div>
                             <div class="form-group row">
                                 <label for="bobot" class="col-md-4 col-form-label text-md-right">
-                                    {{ __('Bobot') }}
+                                    {{ __('Nilai') }}
                                 </label>
                                 <div class="col-md-8">
-                                <input type="text" name="bobot" id="bobot" class="form-control" placeholder="{{ __('Masukan Bobot ') }}" required>
+                                    <select name="bobot" id="" class="form-control">
+                                        @foreach ($preference as $item)
+                                            <option value="{{ $item->bobot }}" id="">{{$item->lable}}</option>
+                                        @endforeach
+                                    </select>
                                 </div>
                             </div>
                             <div class="form-group row mb-0">

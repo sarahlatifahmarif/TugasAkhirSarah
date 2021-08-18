@@ -21,7 +21,7 @@
                             </div>
                             <div class="form-group row">
                                 <label for="bobot" class="col-md-4 col-form-label text-md-right">
-                                    {{ __('Bobot') }}
+                                    {{ __('Nilai') }}
                                 </label>
                                 <div class="col-md-8">
                                 <input type="text" name="bobot" id="bobot" class="form-control" placeholder="{{ __('Masukan Bobot') }}" value="{{ $kriteria->bobot }}" required>
