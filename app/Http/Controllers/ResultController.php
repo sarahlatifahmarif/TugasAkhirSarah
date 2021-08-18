@@ -7,6 +7,7 @@ use App\Models\JurusanSekolah;
 use App\Models\TabelPilihan;
 use App\Models\Prodi;
 use App\Models\Kriteria;
+use App\Models\Preference;
 class ResultController extends Controller
 {
     public function index(){
